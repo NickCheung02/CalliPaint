@@ -1,5 +1,5 @@
 # CalliPaint: Fine-Grained Calligraphy-Landscape Synthesis via Decoupled Font Encoding and Parallel Residual Attention
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Paper Status](https://img.shields.io/badge/Paper-Under_Review-orange.svg)]() [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-ee4c2c.svg)](https://pytorch.org/)
 ## 📖 Introduction
 
 CalliPaint is a diffusion-model-based generation framework designed to address several challenges in traditional ink-wash painting generation, including unnatural integration between calligraphic inscriptions and background scenes, insufficient brushstroke details such as dry-brush texture and ink diffusion, and unstable character structures. By introducing parallel residual attention and decoupled style encoding, the model enables precise control over both glyph morphology and ink-texture characteristics, allowing calligraphy to be organically integrated with the artistic mood and blank-space composition of ink-wash landscapes.
