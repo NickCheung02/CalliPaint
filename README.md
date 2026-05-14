@@ -8,7 +8,7 @@ CalliPaint is a diffusion-model-based generation framework designed to address s
 
 ## 📢 Open Source Plan
 
-**Core inference code:** ✅ Released on April 27, 2026. This repository provides complete single-GPU inference scripts (`demo.py`, `anytext2_singleGPU.py`) and batch generation scripts.
+**Core inference code:** ✅ Released on April 27, 2026. This repository provides complete single-GPU inference scripts and batch generation scripts.
 
 **Calliscape dataset:** ✅ Officially released on April 27, 2026. The dataset contains 20,000 background images without calligraphy and 8,000 samples with annotated calligraphic inscriptions.
 
