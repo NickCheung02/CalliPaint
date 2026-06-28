@@ -1,8 +1,8 @@
-# CalliPaint: Fine-Grained Calligraphy-Landscape Synthesis via Decoupled Font Encoding and Parallel Residual Attention
+# InkScribe: Fine-Grained Calligraphy-Landscape Synthesis via Decoupled Font Encoding and Parallel Residual Attention
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Paper Status](https://img.shields.io/badge/Paper-Under_Review-orange.svg)]() [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-ee4c2c.svg)](https://pytorch.org/)
 ## 📖 Introduction
 
-CalliPaint is a diffusion-model-based generation framework designed to address several challenges in traditional ink-wash painting generation, including unnatural integration between calligraphic inscriptions and background scenes, insufficient brushstroke details such as dry-brush texture and ink diffusion, and unstable character structures. By introducing parallel residual attention and decoupled style encoding, the model enables precise control over both glyph morphology and ink-texture characteristics, allowing calligraphy to be organically integrated with the artistic mood and blank-space composition of ink-wash landscapes.
+InkScribe is a diffusion-model-based generation framework designed to address several challenges in traditional ink-wash painting generation, including unnatural integration between calligraphic inscriptions and background scenes, insufficient brushstroke details such as dry-brush texture and ink diffusion, and unstable character structures. By introducing parallel residual attention and decoupled style encoding, the model enables precise control over both glyph morphology and ink-texture characteristics, allowing calligraphy to be organically integrated with the artistic mood and blank-space composition of ink-wash landscapes.
 
 **Note:** Since the paper is currently under submission, this repository temporarily hides detailed technical information and only presents qualitative visual results. More details will be updated after the paper is officially accepted.
 
@@ -18,9 +18,9 @@ CalliPaint is a diffusion-model-based generation framework designed to address s
 
 ## 🏗️ Core Methodology
 
-![Model architecture of CalliPaint](assets/model_architecture.png)
+![Model architecture of InkScribe](assets/model_architecture.png)
 
-*Figure 1. Overall architecture of CalliPaint. The detailed model design will be disclosed after the paper is officially accepted.*
+*Figure 1. Overall architecture of InkScribe. The detailed model design will be disclosed after the paper is officially accepted.*
 
 ## 🐧 Linux Deployment
 
@@ -32,12 +32,12 @@ Use `conda` to quickly create the development environment:
 
 ```bash
 # Clone the repository
-git clone https://github.com/NickCheung02/CalliPaint.git
-cd CalliPaint
+git clone https://github.com/NickCheung02/InkScribe.git
+cd InkScribe
 
 # Create the environment according to environment.yaml
 conda env create -f environment.yaml
-conda activate callipaint
+conda activate InkScribe
 ```
 
 ### 2. Parameter Configuration Guide
@@ -59,7 +59,7 @@ The core inference code is ready. After the model weight files are released, ple
 This method is suitable for debugging specific prompts and calligraphic text.
 
 ```bash
-python eval/infer_CalliPaint.py \
+python eval/infer_InkScribe.py \
     --ckpt_path "$CKPT_PATH" \
     --input_json "$INPUT_JSON" \
     --output_dir "$OUTPUT_DIR"
@@ -72,16 +72,16 @@ This method is suitable for large-scale generation on the test set for qualitati
 ```bash
 # Before running, please modify the environment variables and dataset paths
 # in the script according to your actual settings.
-# vim eval/infer_Callipaint_bash.sh
+# vim eval/infer_InkScribe_bash.sh
 
 # Grant execution permission and run the script
-chmod +x eval/infer_Callipaint_bash.sh
-bash eval/infer_Callipaint_bash.sh
+chmod +x eval/infer_InkScribe_bash.sh
+bash eval/infer_InkScribe_bash.sh
 ```
 
 ## 🚀 Training Tutorial
 
-CalliPaint adopts a two-stage progressive training strategy to jointly achieve calligraphic brushstroke rendering and glyph-structure control.
+InkScribe adopts a two-stage progressive training strategy to jointly achieve calligraphic brushstroke rendering and glyph-structure control.
 
 ### 1. Data Preparation
 
@@ -121,7 +121,7 @@ The following section presents qualitative results of the model on the Calliscap
 
 ![Visual comparison with SOTA methods](assets/Comparison_with_SOTA.jpg)
 
-***Figure 2**. Visual comparison with mainstream SOTA methods. CalliPaint achieves more natural integration between calligraphic inscriptions and ink-wash landscape backgrounds.*
+***Figure 2**. Visual comparison with mainstream SOTA methods. InkScribe achieves more natural integration between calligraphic inscriptions and ink-wash landscape backgrounds.*
 
 ![Ablation study results](assets/ABStudy.jpg)
 
